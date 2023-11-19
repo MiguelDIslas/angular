@@ -1,32 +1,32 @@
 <mat-card>
     <mat-card-header>
-        <h1>Crear publicación</h1>
+        <h1>Actualizar publicación</h1>
     </mat-card-header>
     <mat-card-content>
-        <form class="example-form" [formGroup]="postform" (ngSubmit)="createPost()">
+        <form class="example-form" [formGroup]="postform" (ngSubmit)="updatePost()">
             <mat-form-field class="w-full">
                 <mat-label>Título de la publicación</mat-label>
-                <input matInput formControlName="title">
+                <input matInput formControlName="title" [value]="post.title">
             </mat-form-field>
 
             <mat-form-field class="w-full">
                 <mat-label>Contenido</mat-label>
-                <input matInput formControlName="content">
+                <input matInput formControlName="content" [value]="post.content">
             </mat-form-field>
 
             <mat-form-field class="w-full">
                 <mat-label>Imagen que llevará la publicación</mat-label>
-                <input matInput formControlName="mainImageUrl">
+                <input matInput formControlName="mainImageUrl" [value]="post.mainImageUrl">
             </mat-form-field>
 
             <mat-form-field class="w-full">
                 <mat-label>Id del video de youtube</mat-label>
-                <input matInput formControlName="videoUrl">
+                <input matInput formControlName="videoUrl" [value]="post.videoUrl">
             </mat-form-field>
 
             <mat-form-field class="w-full">
                 <mat-label>Categoría</mat-label>
-                <mat-select formControlName="categoryId">
+                <mat-select formControlName="categoryId" [(value)]="post.category.id">
                     <mat-option *ngFor="let category of categories" [value]="category.id">
                         {{category.title}}
                     </mat-option>
@@ -34,7 +34,7 @@
             </mat-form-field>
 
             <div>
-                <button type="submit" mat-raised-button color="primary">Registrar</button>
+                <button type="submit" mat-raised-button color="primary">Actualizar</button>
             </div>
         </form>
     </mat-card-content>

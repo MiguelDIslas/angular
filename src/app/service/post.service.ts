@@ -20,4 +20,12 @@ export class PostService {
   CreatePost(data: any) {
     return this.http.post(this.apiBaseUrl + '/post', data);
   }
+
+  UpdatePost(id: string, data: any) {
+    return this.http.patch(this.apiBaseUrl + '/post/' + id, data);
+  }
+
+  DeletePost(id: string) {
+    return this.http.delete(this.apiBaseUrl + '/post/' + id);
+  }
 }

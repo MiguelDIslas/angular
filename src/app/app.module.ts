@@ -17,9 +17,14 @@ import { CategoryComponent } from './category/category.component';
 import { PostComponent } from './post/post.component';
 import { CreateCategoryComponent } from './create-category/create-category.component';
 import { CreatePostComponent } from './create-post/create-post.component';
+import { UpdatePostComponent } from './update-post/update-post.component';
+import { UpdateCategoryComponent } from './update-category/update-category.component';
+import { UpdateQuestionComponent } from './update-question/update-question.component';
+import { CreateQuestionComponent } from './create-question/create-question.component';
+import { QuestionComponent } from './question/question.component';
 
 @NgModule({
-  declarations: [AppComponent, RegisterComponent, LoginComponent, HomeComponent, UserlistingComponent, UpdatepopupComponent, CategoryComponent, PostComponent, CreateCategoryComponent, CreatePostComponent],
+  declarations: [AppComponent, RegisterComponent, LoginComponent, HomeComponent, UserlistingComponent, UpdatepopupComponent, CategoryComponent, PostComponent, CreateCategoryComponent, CreatePostComponent, UpdatePostComponent, UpdateCategoryComponent, UpdateQuestionComponent, CreateQuestionComponent, QuestionComponent],
   imports: [
     
     BrowserModule,

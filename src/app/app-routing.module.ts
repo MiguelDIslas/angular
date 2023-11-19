@@ -9,6 +9,11 @@ import { CategoryComponent } from './category/category.component';
 import { PostComponent } from './post/post.component';
 import { CreateCategoryComponent } from './create-category/create-category.component';
 import { CreatePostComponent } from './create-post/create-post.component';
+import { UpdateCategoryComponent } from './update-category/update-category.component';
+import { UpdatePostComponent } from './update-post/update-post.component';
+import { QuestionComponent } from './question/question.component';
+import { CreateQuestionComponent } from './create-question/create-question.component';
+import { UpdateQuestionComponent } from './update-question/update-question.component';
 
 const routes: Routes = [
   {
@@ -45,8 +50,33 @@ const routes: Routes = [
     canActivate: [AuthGuard],
   },
   {
+    path: 'edit-category/:id',
+    component: UpdateCategoryComponent,
+    canActivate: [AuthGuard],
+  },
+  {
     path: 'create-post',
     component: CreatePostComponent,
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'edit-post/:id',
+    component: UpdatePostComponent,
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'question/:id',
+    component: QuestionComponent,
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'create-question/:id',
+    component: CreateQuestionComponent,
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'edit-question/:id',
+    component: UpdateQuestionComponent,
     canActivate: [AuthGuard],
   },
 ];

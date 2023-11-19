@@ -1,17 +1,17 @@
 <mat-card>
     <mat-card-header>
-        <h1>Crear categoría</h1>
+        <h1>Crear pregunta</h1>
     </mat-card-header>
     <mat-card-content>
-        <form class="example-form" [formGroup]="categoryform" (ngSubmit)="createCategory()">
+        <form class="example-form" [formGroup]="questionform" (ngSubmit)="createQuestion()">
             <mat-form-field class="w-full">
-                <mat-label>Nombre de la categoría</mat-label>
-                <input matInput formControlName="title">
+                <mat-label>Pregunta</mat-label>
+                <input matInput formControlName="question">
             </mat-form-field>
 
             <mat-form-field class="w-full">
-                <mat-label>Descripción</mat-label>
-                <input matInput formControlName="description">
+                <mat-label>Respuesta</mat-label>
+                <input matInput formControlName="answer">
             </mat-form-field>
 
             <div>

@@ -20,4 +20,12 @@ export class CategoryService {
   CreateCategory(data: any) {
     return this.http.post(this.apiBaseUrl + '/category', data);
   }
+
+  UpdateCategory(id: string, data: any) {
+    return this.http.patch(this.apiBaseUrl + '/category/' + id, data);
+  }
+
+  DeleteCategory(id: string) {
+    return this.http.delete(this.apiBaseUrl + '/category/' + id);
+  }
 }
