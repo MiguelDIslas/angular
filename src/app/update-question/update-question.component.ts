@@ -57,7 +57,9 @@ export class UpdateQuestionComponent {
         .subscribe((res: any) => {
           if (res) {
             this.toastr.success('Se ha actualizado la pregunta');
-            this.router.navigate(['/question/' + this.id]);
+            this.router.navigate([
+              '/question/' + this.questionform.value.postId,
+            ]);
           } else {
             this.toastr.error('No se ha podido actualizar la pregunta');
           }
